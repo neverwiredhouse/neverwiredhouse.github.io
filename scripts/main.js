@@ -181,6 +181,10 @@ $(function(){
   var screen_size = $(window).height();
   var height = $('body').height() - screen_size;
 
+
+
+  //ABOUT:
+
   //Find the proper lengths of Triangle levels and 'hide' them
   var path = document.querySelector('#T-1');
   var length = path.getTotalLength();
@@ -316,6 +320,128 @@ $(function(){
 
 
 
+
+
+  //RESUME
+  path = document.querySelector('#two-nine-top');
+  length = path.getTotalLength();
+  $('#two-nine-top').css({
+    strokeDasharray: length,
+    strokeDashoffset: length
+  });
+
+  path = document.querySelector('#two-nine-bottom');
+  length = path.getTotalLength();
+  $('#two-nine-bottom').css({
+    strokeDasharray: length,
+    strokeDashoffset: length
+  });
+
+  path = document.querySelector('#electrician-line');
+  length = path.getTotalLength();
+  $('#electrician-line').css({
+    strokeDasharray: length,
+    strokeDashoffset: length
+  });
+
+  path = document.querySelector('#lifegaurd-line');
+  length = path.getTotalLength();
+  $('#lifegaurd-line').css({
+    strokeDasharray: length,
+    strokeDashoffset: length
+  });
+
+  path = document.querySelector('#two-thirteen-top');
+  length = path.getTotalLength();
+  $('#two-thirteen-top').css({
+    strokeDasharray: length,
+    strokeDashoffset: length
+  });
+
+  path = document.querySelector('#two-thirteen-bottom');
+  length = path.getTotalLength();
+  $('#two-thirteen-bottom').css({
+    strokeDasharray: length,
+    strokeDashoffset: length
+  });
+
+  path = document.querySelector('#engineer-line');
+  length = path.getTotalLength();
+  $('#engineer-line').css({
+    strokeDasharray: length,
+    strokeDashoffset: length
+  });
+
+  path = document.querySelector('#two-fourteen-top');
+  length = path.getTotalLength();
+  $('#two-fourteen-top').css({
+    strokeDasharray: length,
+    strokeDashoffset: length
+  });
+
+  path = document.querySelector('#two-fourteen-bottom');
+  length = path.getTotalLength();
+  $('#two-fourteen-bottom').css({
+    strokeDasharray: length,
+    strokeDashoffset: length
+  });
+
+  path = document.querySelector('#tower-tech-outline');
+  length = path.getTotalLength();
+  $('#tower-tech-outline').css({
+    strokeDasharray: length,
+    strokeDashoffset: length
+  });
+
+  path = document.querySelector('#tower-tech-line');
+  length = path.getTotalLength();
+  $('#tower-tech-line').css({
+    strokeDasharray: length,
+    strokeDashoffset: length
+  });
+
+  path = document.querySelector('#tower-two-line');
+  length = path.getTotalLength();
+  $('#tower-two-line').css({
+    strokeDasharray: length,
+    strokeDashoffset: length
+  });
+
+  path = document.querySelector('#ncees-line');
+  length = path.getTotalLength();
+  $('#ncees-line').css({
+    strokeDasharray: length,
+    strokeDashoffset: length
+  });
+
+  path = document.querySelector('#osha-line');
+  length = path.getTotalLength();
+  $('#osha-line').css({
+    strokeDasharray: length,
+    strokeDashoffset: length
+  });
+
+  path = document.querySelector('#two-fifteen-top');
+  length = path.getTotalLength();
+  $('#two-fifteen-top').css({
+    strokeDasharray: length,
+    strokeDashoffset: length
+  });
+
+  path = document.querySelector('#two-fifteen-bottom');
+  length = path.getTotalLength();
+  $('#two-fifteen-bottom').css({
+    strokeDasharray: length,
+    strokeDashoffset: length
+  });
+
+  path = document.querySelector('#fe-line');
+  length = path.getTotalLength();
+  $('#fe-line').css({
+    strokeDasharray: length,
+    strokeDashoffset: length
+  });
+
   //Scenes
   var scene = new ScrollMagic.Scene({triggerElement: 'body', triggerHook: 'onLeave', duration: height})
           .setTween(TweenMax.to('#progress-bar', 1,{
@@ -328,7 +454,7 @@ $(function(){
 
   //parallaxParent
   var scene_parallax = new ScrollMagic.Scene({triggerElement: '#parallax', triggerHook: 'onEnter', duration: '300%'})
-				.setTween(TweenMax.to('#p-mustache', 1,{y: '50%', ease: Linear.easeNone}))
+				.setTween(TweenMax.to('.p-mustache', 1,{y: '50%', ease: Linear.easeNone}))
 				.addTo(controller);
 
   var scene = new ScrollMagic.Scene({triggerElement: '#signature-connor', triggerHook: 'onEnter', offset: '50'}).on('enter', function() {
@@ -454,6 +580,217 @@ $(function(){
   .setTween(TweenMax.to('#T-7', 1,{strokeDashoffset: 0, ease: Linear.easeNone}))
   .addTo(controller);
 
+
+
+
+
+
+  //RESUME:
+  var scene = new ScrollMagic.Scene({triggerElement: '#two-nine-circle', triggerHook: 'onEnter', offset: 150, duration: 200})
+  .setTween(TweenMax.to('#two-nine-top', 2,{strokeDashoffset: 0, ease: Linear.easeNone}))
+  .addTo(controller);
+
+  var scene = new ScrollMagic.Scene({triggerElement: '#two-nine-circle', triggerHook: 'onEnter', offset: 150, duration: 200})
+  .setTween(TweenMax.to('#two-nine-bottom', 2,{strokeDashoffset: 0, ease: Linear.easeNone}))
+  .addTo(controller);
+
+  var scene = new ScrollMagic.Scene({triggerElement: '#two-nine-circle', triggerHook: 'onEnter', offset: 221.5, duration: 150})
+  .setTween(TweenMax.to('#electrician-line', 2,{strokeDashoffset: 0, ease: Linear.easeNone}))
+  .on('end', () => {
+    var scrollInfo = controller.info('scrollDirection');
+    if (scrollInfo == 'FORWARD'){
+      $('#electrician-emblem').css('opacity','1');
+      $('#electrician-text').css({
+        transform: 'translate(69.9888px, 245.061px)',
+        opacity: '1'});
+    }
+    else {
+      $('#electrician-emblem').css('opacity','0');
+      $('#electrician-text').css({
+        transform: 'translate(69.9888px, 350px)',
+        opacity: '0'});
+    }
+
+  })
+  .addTo(controller);
+
+  var scene = new ScrollMagic.Scene({triggerElement: '#two-nine-circle', triggerHook: 'onEnter', offset: 350, duration: 150})
+  .setTween(TweenMax.to('#lifegaurd-line', 2,{strokeDashoffset: 0, ease: Linear.easeNone}))
+  .on('end', () => {
+    var scrollInfo = controller.info('scrollDirection');
+    if (scrollInfo == 'FORWARD'){
+      $('#lifegaurd-emblem').css('opacity','1');
+      $('#lifegaurd-text').css({
+        transform: 'translate(777.4434px, 237.999px)',
+        opacity: '1'});
+    }
+    else {
+      $('#lifegaurd-emblem').css('opacity','0');
+      $('#lifegaurd-text').css({
+        transform: 'translate(777.4434px, 350px)',
+        opacity: '0'});
+    }
+
+  })
+  .addTo(controller);
+
+
+
+  var scene = new ScrollMagic.Scene({triggerElement: '#two-thirteen-circle', triggerHook: 'onEnter', offset: 150, duration: 200})
+  .setTween(TweenMax.to('#two-thirteen-top', 2,{strokeDashoffset: 0, ease: Linear.easeNone}))
+  .addTo(controller);
+
+  var scene = new ScrollMagic.Scene({triggerElement: '#two-thirteen-circle', triggerHook: 'onEnter', offset: 150, duration: 200})
+  .setTween(TweenMax.to('#two-thirteen-bottom', 2,{strokeDashoffset: 0, ease: Linear.easeNone}))
+  .addTo(controller);
+
+  var scene = new ScrollMagic.Scene({triggerElement: '#two-thirteen-circle', triggerHook: 'onEnter', offset: 338.5, duration: 150})
+  .setTween(TweenMax.to('#engineer-line', 2,{strokeDashoffset: 0, ease: Linear.easeNone}))
+  .on('end', () => {
+    var scrollInfo = controller.info('scrollDirection');
+    if (scrollInfo == 'FORWARD'){
+      $('#engineer-emblem').css('opacity','1');
+      $('#engineer-text').css({
+        transform: 'translate(69.106px, 460.7075px)',
+        opacity: '1'});
+    }
+    else {
+      $('#engineer-emblem').css('opacity','0');
+      $('#engineer-text').css({
+        transform: 'translate(69.106px, 575px)',
+        opacity: '0'});
+    }
+  })
+  .addTo(controller);
+
+
+  var scene = new ScrollMagic.Scene({triggerElement: '#two-thirteen-circle', triggerHook: 'onEnter', offset: 350, duration: 150})
+  .setTween(TweenMax.to('#tower-tech-outline', 2,{strokeDashoffset: 0, ease: Linear.easeNone}))
+  .on('end', () => {
+    var scrollInfo = controller.info('scrollDirection');
+    if (scrollInfo == 'FORWARD'){
+      $('#tower-tech-emblem').css('opacity','1');
+      $('#tower-tech-text').css({
+        transform: 'translate(727.4424px, 454.6069px)',
+        opacity: '1'});
+    }
+    else {
+      $('#tower-tech-emblem').css('opacity','0');
+      $('#tower-tech-text').css({
+        transform: 'translate(727.4424px, 575px)',
+        opacity: '0'});
+    }
+  })
+  .addTo(controller);
+
+  var scene = new ScrollMagic.Scene({triggerElement: '#two-thirteen-circle', triggerHook: 'onEnter', offset: 500, duration: 75})
+  .setTween(TweenMax.to('#tower-tech-line', 2,{strokeDashoffset: 0, ease: Linear.easeNone}))
+  .addTo(controller);
+
+  var scene = new ScrollMagic.Scene({triggerElement: '#two-thirteen-circle', triggerHook: 'onEnter', offset: 550, duration: 150})
+  .setTween(TweenMax.to('#two-fourteen-top', 2,{strokeDashoffset: 0, ease: Linear.easeNone}))
+  .addTo(controller);
+
+  var scene = new ScrollMagic.Scene({triggerElement: '#two-thirteen-circle', triggerHook: 'onEnter', offset: 550, duration: 150})
+  .setTween(TweenMax.to('#two-fourteen-bottom', 2,{strokeDashoffset: 0, ease: Linear.easeNone}))
+  .addTo(controller);
+
+  //Tower Tech II
+  var scene = new ScrollMagic.Scene({triggerElement: '#two-thirteen-circle', triggerHook: 'onEnter', offset: 570, duration: 150})
+  .setTween(TweenMax.to('#tower-two-line', 2,{strokeDashoffset: 0, ease: Linear.easeNone}))
+  .on('end', () => {
+    var scrollInfo = controller.info('scrollDirection');
+    if (scrollInfo == 'FORWARD'){
+      $('#tower-tech-two-emblem').css('opacity','1');
+      $('#tower-tech-two-text').css({
+        transform: 'translate(686.8232px, 754.2241px)',
+        opacity: '1'});
+    }
+    else {
+      $('#tower-tech-two-emblem').css('opacity','0');
+      $('#tower-tech-two-text').css({
+        transform: 'translate(686.8232px, 875px)',
+        opacity: '0'});
+    }
+  })
+  .addTo(controller);
+
+  //NCEES
+  var scene = new ScrollMagic.Scene({triggerElement: '#two-thirteen-circle', triggerHook: 'onEnter', offset: 646, duration: 150})
+  .setTween(TweenMax.to('#ncees-line', 2,{strokeDashoffset: 0, ease: Linear.easeNone}))
+  .on('end', () => {
+    var scrollInfo = controller.info('scrollDirection');
+    if (scrollInfo == 'FORWARD'){
+      $('#ncees-emblem').css('opacity','1');
+      $('#ncees-text').css({
+        transform: 'translate(69.9927px, 769.8647px)',
+        opacity: '1'});
+    }
+    else {
+      $('#ncees-emblem').css('opacity','0');
+      $('#ncees-text').css({
+        transform: 'translate(69.9927px, 890px)',
+        opacity: '0'});
+    }
+  })
+  .addTo(controller);
+
+  //OSHA
+  var scene = new ScrollMagic.Scene({triggerElement: '#two-thirteen-circle', triggerHook: 'onEnter', offset: 633, duration: 200})
+  .setTween(TweenMax.to('#osha-line', 2,{strokeDashoffset: 0, ease: Linear.easeNone}))
+  .on('end', () => {
+    var scrollInfo = controller.info('scrollDirection');
+    if (scrollInfo == 'FORWARD'){
+      $('#osha-emblem').css('opacity','1');
+      $('#osha-text').css({
+        transform: 'translate(69.9927px, 1043.269px)',
+        opacity: '1'});
+    }
+    else {
+      $('#osha-emblem').css('opacity','0');
+      $('#osha-text').css({
+        transform: 'translate(69.9927px, 1170px)',
+        opacity: '0'});
+    }
+  })
+  .addTo(controller);
+
+
+  //2015
+  var scene = new ScrollMagic.Scene({triggerElement: '#two-fifteen-circle', triggerHook: 'onEnter', offset: 300, duration: 200})
+  .setTween(TweenMax.to('#two-fifteen-top', 2,{strokeDashoffset: 0, ease: Linear.easeNone}))
+  .addTo(controller);
+
+  var scene = new ScrollMagic.Scene({triggerElement: '#two-fifteen-circle', triggerHook: 'onEnter', offset: 300, duration: 200})
+  .setTween(TweenMax.to('#two-fifteen-bottom', 2,{strokeDashoffset: 0, ease: Linear.easeNone}))
+  .addTo(controller);
+
+  //FE
+  var scene = new ScrollMagic.Scene({triggerElement: '#two-fifteen-circle', triggerHook: 'onEnter', offset: 426.5, duration: 200})
+  .setTween(TweenMax.to('#fe-line', 2,{strokeDashoffset: 0, ease: Linear.easeNone}))
+  .on('end', () => {
+    var scrollInfo = controller.info('scrollDirection');
+    if (scrollInfo == 'FORWARD'){
+      $('#fe-emblem').css('opacity','1');
+      $('#fe-text').css({
+        transform: 'translate(838.5469px, 1033.2036px)',
+        opacity: '1'});
+    }
+    else {
+      $('#fe-emblem').css('opacity','0');
+      $('#fe-text').css({
+        transform: 'translate(838.5469px, 1150px)',
+        opacity: '0'});
+    }
+  })
+  .addTo(controller);
+
+
+
+
+
+
+
   //CLICKS:
 
 
@@ -511,7 +848,7 @@ $(function(){
           $('.wide-load').css({'fill-opacity': '0'});
         }
         $(CoverSvgs[i]).css({display:'none'});
-        $(CoverSvgs[x]).css({display:'inline-block'});
+        $(CoverSvgs[x]).css({display:'inline-block', transform: 'translateY(-50%)'});
         if (CoverSvgs[x] == '#cover6-svg'){
           animateSVG(CoverSvgs[x], 3000, 1500);
         }
@@ -545,7 +882,7 @@ $(function(){
           $('.wide-load').css({'fill-opacity': '0'});
         }
         $(CoverSvgs[i]).css({display:'none'});
-        $(CoverSvgs[x]).css({display:'inline-block'});
+        $(CoverSvgs[x]).css({display:'inline-block', transform: 'translateY(-50%)'});
         if (CoverSvgs[x] == '#cover6-svg'){
           animateSVG(CoverSvgs[x], 3000, 1500);
         }
@@ -581,10 +918,50 @@ $(function(){
 
 
 
+    //hexagon-art:
+    $('#hexagon').clone().prop({ id: 'hexagon2', name: 'hexagon2' }).appendTo('#hex-artwork');
+    $('#hexagon').clone().prop({ id: 'hexagon3', name: 'hexagon3' }).appendTo('#hex-artwork');
+    $('#hexagon').clone().prop({ id: 'hexagon4', name: 'hexagon4' }).appendTo('#hex-artwork');
+    $('#hexagon').clone().prop({ id: 'hexagon5', name: 'hexagon5' }).appendTo('#hex-artwork');
+    $('#hexagon').clone().prop({ id: 'hexagon6', name: 'hexagon6' }).appendTo('#hex-artwork');
+    $('#hexagon').clone().prop({ id: 'hexagon7', name: 'hexagon7' }).appendTo('#hex-artwork');
+    $('#hexagon').clone().prop({ id: 'hexagon8', name: 'hexagon8' }).appendTo('#hex-artwork');
+    $('#hexagon').clone().prop({ id: 'hexagon9', name: 'hexagon9' }).appendTo('#hex-artwork');
+    $('#hexagon').clone().prop({ id: 'hexagon10', name: 'hexagon10' }).appendTo('#hex-artwork');
+    $('#hexagon').clone().prop({ id: 'hexagon11', name: 'hexagon11' }).appendTo('#hex-artwork');
+    $('#hexagon').clone().prop({ id: 'hexagon12', name: 'hexagon12' }).appendTo('#hex-artwork');
+    $('#hexagon').clone().prop({ id: 'hexagon13', name: 'hexagon13' }).appendTo('#hex-artwork');
+    $('#hexagon').clone().prop({ id: 'hexagon14', name: 'hexagon14' }).appendTo('#hex-artwork');
+    $('#hexagon').clone().prop({ id: 'hexagon15', name: 'hexagon15' }).appendTo('#hex-artwork');
+    $('#hexagon').clone().prop({ id: 'hexagon16', name: 'hexagon16' }).appendTo('#hex-artwork');
+    $('#hexagon').clone().prop({ id: 'hexagon17', name: 'hexagon17' }).appendTo('#hex-artwork');
+    $('#hexagon').clone().prop({ id: 'hexagon18', name: 'hexagon18' }).appendTo('#hex-artwork');
+    $('#hexagon').clone().prop({ id: 'hexagon19', name: 'hexagon19' }).appendTo('#hex-artwork');
+    $('#hexagon').clone().prop({ id: 'hexagon20', name: 'hexagon20' }).appendTo('#hex-artwork');
 
 
+    // stroke-width: 0.2;
+    // transform: scale(5);
 
 });
+
+
+
+var rotate_total = 0;
+
+setInterval(() => {
+  rotate_total -= 120;
+  $('#hexagon').css({transform: 'rotate(' + rotate_total + 'deg)'});
+  for (var y = 2; y <= 20; y++){
+    setTimeout((y) => {
+      $('#hexagon' + y).css({transform: 'rotate(' + rotate_total + 'deg) scale(' + y + ')'});
+    }, y*30, y);
+  }
+}, 2900);
+
+
+
+
 
 function animateSVG (idTag,dur,stagger) {
   var $svgCover = $(idTag).drawsvg({

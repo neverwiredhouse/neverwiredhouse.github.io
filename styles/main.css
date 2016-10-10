@@ -113,9 +113,9 @@ button:hover {
 
 
 #home {
+  position: relative;
   color: #F8F3ED;
   padding-left: 7px;
-  text-align: center;
   background-color: #83BBB8;
   width: 100%;
   height: calc(100vh - 60px);
@@ -130,16 +130,52 @@ button:hover {
 }
 
 .svg-Container {
+  text-align: center;
   width:100%;
-  text-align:center;
+  position: relative;
+  top: 50%;
 }
 
-#cover1 {
+#left-clicker {
+  display: none;
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  left: 100px;
+  top: 50%;
+  margin-top: -100px;
+  -webkit-transition: width 2s, height 2s, background-color 2s, -webkit-transform 1s;
+  transition: width 2s, height 2s, background-color 2s, transform 1s;
+}
+
+#left-clicker:hover {
+  transform: translateX(30px);
+}
+
+.svg-rotation {
+
+}
+
+#right-clicker {
+  display: none;
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  right: 100px;
+  top: 50%;
+  margin-top: -100px;
+  -webkit-transition: width 2s, height 2s, background-color 2s, -webkit-transform 1s;
+  transition: width 2s, height 2s, background-color 2s, transform 1s;
+
+}
+
+#right-clicker:hover {
+  transform: translateX(-30px);
 }
 
 #cover1-svg {
-  text-align: center;
   display: inline-block;
+  transform: translateY(-50%);
 }
 
 #cover2-svg {
@@ -166,10 +202,6 @@ button:hover {
   display: none;
 }
 
-#owlSVG {
-  position:relative;
-}
-
 .wide-load {
   webkit-transition: width 2s, height 2s, background-color 2s, -webkit-transform 1s;
   transition: width 2s, height 2s, background-color 2s, transform 1s;
@@ -177,39 +209,6 @@ button:hover {
 
 .words {
   fill-opacity: 0;
-}
-
-#left-clicker {
-  display: none;
-  width: 200px;
-  height: 200px;
-  padding-right: 50px;
-  padding-bottom: 150px;
-  -webkit-transition: width 2s, height 2s, background-color 2s, -webkit-transform 1s;
-  transition: width 2s, height 2s, background-color 2s, transform 1s;
-}
-
-#left-clicker:hover {
-  transform: translateX(30px);
-}
-
-.svg-rotation {
-
-}
-
-#right-clicker {
-  display: none;
-  width: 200px;
-  height: 200px;
-  padding-left: 50px;
-  padding-bottom: 150px;
-  -webkit-transition: width 2s, height 2s, background-color 2s, -webkit-transform 1s;
-  transition: width 2s, height 2s, background-color 2s, transform 1s;
-
-}
-
-#right-clicker:hover {
-  transform: translateX(-30px);
 }
 
 
@@ -222,6 +221,7 @@ button:hover {
 
 #about {
   text-align: center;
+  overflow: hidden;
   padding-top: 95px;
   padding-left: 7px;
   width: 100%;
@@ -552,17 +552,17 @@ animation: animatedMovementRight 2s ease-in-out alternate infinite;
 
 #portfolio {
   width: 100%;
-  height: 2000px;
+  height: 100%;
   position: relative;
   background-color: #F8F3ED;
 }
 
 .parallaxParent {
-    height: 1500px;
+    height: 500px;
 		overflow: hidden;
 	}
 
-#p-mustache {
+.p-mustache {
   background-image: url("../images/mustache-repeat-2-01.png");
   background-size: 300px 300px;
   height: 200%;
@@ -573,7 +573,7 @@ animation: animatedMovementRight 2s ease-in-out alternate infinite;
 
 #p-overlay {
   width: 100%;
-  height: 1500px;
+  height: 500px;
   position: absolute;
   top: 0;
 }
@@ -585,13 +585,37 @@ animation: animatedMovementRight 2s ease-in-out alternate infinite;
   background-size: 100% 500px;
 }
 
+
+
+
+#portfolio-centerpiece {
+  padding-top: 50px;
+  background-color: #F8F3ED;
+}
+
+#left-portfolio {
+  animation: animatedMovementLeft 2s ease-in-out alternate infinite;
+}
+
+#right-portfolio {
+animation: animatedMovementRight 2s ease-in-out alternate infinite;
+}
+
+
+
+
+
 #overlay-middle {
-  height: 500px;
+  height: 100%;
   text-align: center;
   background-color: #F8F3ED;
-  background-size: 500px 500px;
-  background-position: center;
-  background-repeat: no-repeat;
+}
+
+
+#p-overlay-2 {
+  width: 100%;
+  height: 500px;
+  top: 0;
 }
 
 #overlay-bottom {
@@ -609,6 +633,128 @@ animation: animatedMovementRight 2s ease-in-out alternate infinite;
   transform: rotate(45deg);
   right: 50%;
 }
+
+#hex-artwork {
+  width: 500px;
+  height: 500px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/*@keyframes rotate_hexy {
+  100% {
+    transform: rotate(-180deg);
+  }
+}*/
+
+.hexagon-attr {
+  /*animation: rotate_hexy 2s infinite;*/
+  position: absolute;
+  transition: 1.5s;
+  transition-timing-function: cubic-bezier(.42, 0, .58, 1);
+}
+
+#hexagon {
+}
+
+#hexagon2 {
+  stroke-width: 0.5;
+  transform: rotate(0deg) scale(2);
+}
+
+#hexagon3 {
+  stroke-width: 0.3333;
+  transform: rotate(0deg) scale(3);
+}
+
+#hexagon4 {
+  stroke-width: 0.25;
+  transform: rotate(0deg) scale(4);
+}
+
+#hexagon5 {
+  stroke-width: 0.2;
+  transform: rotate(0deg) scale(5);
+}
+
+#hexagon6 {
+  stroke-width: 0.167;
+  transform: rotate(0deg) scale(6);
+}
+
+#hexagon7 {
+  stroke-width: 0.142857142857143;
+  transform: rotate(0deg) scale(7);
+}
+
+#hexagon8 {
+  stroke-width: 0.125;
+  transform: rotate(0deg) scale(8);
+}
+
+#hexagon9 {
+  stroke-width: 0.111111111111111;
+  transform: rotate(0deg) scale(9);
+}
+
+#hexagon10 {
+  stroke-width: 0.1;
+  transform: rotate(0deg) scale(10);
+}
+
+#hexagon11 {
+  stroke-width: 0.090909090909091;
+  transform: rotate(0deg) scale(11);
+}
+
+#hexagon12 {
+  stroke-width: 0.083333333333333;
+  transform: rotate(0deg) scale(12);
+}
+
+#hexagon13 {
+  stroke-width: 0.076923076923077;
+  transform: rotate(0deg) scale(13);
+}
+
+#hexagon14 {
+  stroke-width: 0.071428571428571;
+  transform: rotate(0deg) scale(14);
+}
+
+#hexagon15 {
+  stroke-width: 0.066666666666667;
+  transform: rotate(0deg) scale(15);
+}
+
+#hexagon16 {
+  stroke-width: 0.0625;
+  transform: rotate(0deg) scale(16);
+}
+
+#hexagon17 {
+  stroke-width: 0.058823529411765;
+  transform: rotate(0deg) scale(17);
+}
+
+#hexagon18 {
+  stroke-width: 0.055555555555556;
+  transform: rotate(0deg) scale(18);
+}
+
+#hexagon19 {
+  stroke-width: 0.052631578947368;
+  transform: rotate(0deg) scale(19);
+}
+
+#hexagon20 {
+  stroke-width: 0.05;
+  transform: rotate(0deg) scale(20);
+}
+
 
 #portfolio-tag {
   font-size: 30px;
@@ -630,10 +776,114 @@ animation: animatedMovementRight 2s ease-in-out alternate infinite;
 
 #resume {
   width: 100%;
-  height: 1000px;
-  background-color: #83BBB8;
+  height: 100%;
+  text-align: center;
+  background-color: #F8F3ED;
   padding-left: 7px;
-  color: #F8F3ED;
+  color: #83BBB8;
+}
+
+#resume-centerpiece {
+  padding-top: 175px;
+  padding-bottom: 100px;
+}
+
+#left-resume {
+  animation: animatedMovementLeft 2s ease-in-out alternate infinite;
+}
+
+#right-resume {
+animation: animatedMovementRight 2s ease-in-out alternate infinite;
+}
+
+
+#electrician-emblem {
+  opacity: 0;
+  transition: 1s;
+}
+
+#electrician-text {
+  transition: 1s;
+  transform: translate(69.9888px, 350px);
+  opacity: 0;
+}
+
+#lifegaurd-emblem {
+  opacity: 0;
+  transition: 1s;
+}
+
+#lifegaurd-text {
+  transition: 1s;
+  transform: translate(777.4434px, 350px);
+  opacity: 0;
+}
+
+
+#engineer-emblem {
+  opacity: 0;
+  transition: 1s;
+}
+
+#engineer-text {
+  transition: 1s;
+  transform: translate(69.106px, 575px);
+  opacity: 0;
+}
+
+#tower-tech-emblem {
+  opacity: 0;
+  transition: 1s;
+}
+
+#tower-tech-text {
+  transition: 1s;
+  transform: translate(727.4424px, 575px);
+  opacity: 0;
+}
+
+#tower-tech-two-emblem {
+  opacity: 0;
+  transition: 1s;
+}
+
+#tower-tech-two-text{
+  transition: 1s;
+  transform: translate(686.8232px, 875px);
+  opacity: 0;
+}
+
+#ncees-emblem {
+  opacity: 0;
+  transition: 1s;
+}
+
+#ncees-text {
+  transition: 1s;
+  transform: translate(69.9927px, 890px);
+  opacity: 0;
+}
+
+#osha-emblem {
+  opacity: 0;
+  transition: 1s;
+}
+
+#osha-text {
+  transition: 1s;
+  transform: translate(69.9927px, 1170px);
+  opacity: 0;
+}
+
+#fe-emblem {
+  opacity: 0;
+  transition: 1s;
+}
+
+#fe-text {
+  transition: 1s;
+  transform: translate(838.5469px, 1150px);
+  opacity: 0;
 }
 
 #resume-tag {
@@ -643,6 +893,14 @@ animation: animatedMovementRight 2s ease-in-out alternate infinite;
 #resume-tag:hover {
 
 }
+
+
+
+
+
+
+
+
 
 #contact {
   width: 100%;
@@ -658,6 +916,18 @@ animation: animatedMovementRight 2s ease-in-out alternate infinite;
 
 #contact-tag {
 
+}
+
+#contact-centerpiece {
+  padding-top: 20px;
+}
+
+#left-contact {
+  animation: animatedMovementLeft 2s ease-in-out alternate infinite;
+}
+
+#right-contact {
+animation: animatedMovementRight 2s ease-in-out alternate infinite;
 }
 
 #contact-tag:hover {
