@@ -879,22 +879,27 @@ animation: animatedMovementRight 2s ease-in-out alternate infinite;
 }*/
 
 #spinner-contain {
-  z-index: 3;
+	z-index: 4;
   overflow: hidden;
   width: 150px;
   height: 20.5px;
-  z-index: 3;
   left: 798.5px;
   margin-top: 216px;
   position: absolute;
 }
 
+.holder-spinner {
+	position: absolute;
+	width: 150px;
+	height: 1000px;
+	margin-top: -250;
+}
+
 #background-horiz-spinner {
-  z-index: 3;
+  position: absolute;
   width: 150px;
   height: 1000px;
   margin-top: -250;
-  position: relative;
   background-repeat: repeat-y;
   background-image: url("../images/horiz-spinner.png");
   background-size: 150px 21px;
@@ -917,7 +922,6 @@ animation: animatedMovementRight 2s ease-in-out alternate infinite;
   width: 35.5px;
   height: 800px;
   margin-top: -250;
-  position: relative;
   background-repeat: repeat-y;
   background-image: url("../images/left-spinner.png");
   background-size: 35.5px 351px;

@@ -576,9 +576,9 @@ $(function(){
   .setTween(TweenMax.to('#a-t-a', 1,{strokeDashoffset: 0, ease: Linear.easeNone}))
   .addTo(controller);
 
-  var scene = new ScrollMagic.Scene({triggerElement: '#about-cover', triggerHook: 'onEnter'})
-  .setPin('#background-horiz-spinner')
-  .addTo(controller);
+  // var scene = new ScrollMagic.Scene({triggerElement: '#about-cover', triggerHook: 'onEnter'})
+  // .setPin('#background-horiz-spinner')
+  // .addTo(controller);
   //
   var scene = new ScrollMagic.Scene({triggerElement: '#g-c-2', triggerHook: 'onEnter', duration: 1000})
   .setTween(TweenMax.to('#g-c-L', 1,{rotation: 1080, transformOrigin: '28.35px, 28.55px', ease: Linear.easeNone}))
@@ -591,13 +591,13 @@ $(function(){
   .addTo(controller);
 
 
-  var scene = new ScrollMagic.Scene({triggerElement: '#Left-Scroll-Wheel', triggerHook: 'onEnter', offset: 298})
-  .setPin('#left-background-horiz-spinner')
-  .addTo(controller);
+  // var scene = new ScrollMagic.Scene({triggerElement: '#Left-Scroll-Wheel', triggerHook: 'onEnter', offset: 298})
+  // .setPin('#left-background-horiz-spinner')
+  // .addTo(controller);
 
-  var scene = new ScrollMagic.Scene({triggerElement: '#Left-Scroll-Wheel', triggerHook: 'onEnter', offset: 298})
-  .setPin('#right-background-horiz-spinner')
-  .addTo(controller);
+  // var scene = new ScrollMagic.Scene({triggerElement: '#Left-Scroll-Wheel', triggerHook: 'onEnter', offset: 298})
+  // .setPin('#right-background-horiz-spinner')
+  // .addTo(controller);
 
   var scene = new ScrollMagic.Scene({triggerElement: '#AboutMeLogo', triggerHook: 'onEnter', duration: 600, offset: 500})
   .setTween(TweenMax.to('#envelope-run', 1,{strokeDashoffset: 0, ease: Linear.easeNone}))
